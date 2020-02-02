@@ -1,0 +1,39 @@
+# Project: CrashIt
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = CrashIt_private.res
+OBJ      = main.o Util/CrashItUtil.o Util/sysbug.o $(RES)
+LINKOBJ  = main.o Util/CrashItUtil.o Util/sysbug.o $(RES)
+LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc "E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32/libmsvcrt.a" -m32 -s
+INCS     = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = CrashIt.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CC) -c main.cpp -o main.o $(CFLAGS)
+
+Util/CrashItUtil.o: Util/CrashItUtil.cpp
+	$(CC) -c Util/CrashItUtil.cpp -o Util/CrashItUtil.o $(CFLAGS)
+
+Util/sysbug.o: Util/sysbug.cpp
+	$(CC) -c Util/sysbug.cpp -o Util/sysbug.o $(CFLAGS)
+
+CrashIt_private.res: CrashIt_private.rc rsrc.rc
+	$(WINDRES) -i CrashIt_private.rc -F pe-i386 --input-format=rc -o CrashIt_private.res -O coff 
+
