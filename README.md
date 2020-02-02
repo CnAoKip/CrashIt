@@ -8,13 +8,13 @@ CrashIt 是一款可以让你的Windows系统蓝屏崩溃的软件。目前只�
 
 我们可以保证，使用CrashIt 除了需要重启，对您的计算机不会有任何损害。此软件安全无毒。
 
-# 命令行：
+## 命令行：
 
 	CrashIt.exe [crash][checkcode][sysbug] code
 
 		其中code是一个16进制的整数。
 
-# 操作：
+## 操作：
 
 		'crash'：直接让CrashIt跑出bug并产生蓝屏。代码可以为下：
 
