@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	if(argc <= 3) printf("\nCrashIt v1.4.0 - A loophole and Bug test program\nCopyright (C) 2017-2019 Handick Software Co.,Ltd.\n\n");
-	else if(!strcmp(argv[3], "-q")) printf("\nCrashIt v1.4.0 - A loophole test program\nCopyright (C) 2017-2019 Handick Software Co.,Ltd.\n\n");
+	else if(!strcmp(argv[3], "-q")) printf("\nCrashIt v1.4.0 - A loophole and Bug test program\nCopyright (C) 2017-2019 Handick Software Co.,Ltd.\n\n");
 	 
 	if(!ArgsRight) return 0 & printf(" ^Error - Illegal Input.\n\n");
 	else CeBugCheckProc(CallFlag, CallMode, CallCode);
