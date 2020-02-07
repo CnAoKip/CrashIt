@@ -1,4 +1,6 @@
 # CrashIt
+[中文](README-CN.md)
+
 The first project of Cak-Elib: CrashIt Ring3 BSOD Testing Program.
 
 
