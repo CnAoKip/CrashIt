@@ -8,7 +8,7 @@ I wrote a applet for 6 months, for testing your computer's BSOD efficiency (not)
 
 CrashIt is a program that makes your Windows system crash. There has 32-bit command only and it's English (but Chinglish, you know)
 
-It can't doing everything except you will restart the PC sometimes. It's safe.
+It can't do everything except you will restart the PC sometimes. It's safe.
 
 ## SYNOPSIS:
 
@@ -31,7 +31,7 @@ It can't doing everything except you will restart the PC sometimes. It's safe.
 		'checkcode': Custom BSOD code between 0xC0000000 to 0xCFFFFFFF.
 
 
-		'sysbug': Loophole in kernel It can be this:
+		'sysbug': Loophole in kernel. It can be this:
 
 		```Shell
 			0x01 Invalid Kernel Handle (Only for Windows 2000/XP/Server 2003)
